@@ -1,4 +1,5 @@
 class Cat
+  
   attr_reader :name
   attr_accessor :mood
 
@@ -6,6 +7,6 @@ class Cat
     @name = name
     @mood = "nervous"
   end
-  
+
   # code goes here
 end
