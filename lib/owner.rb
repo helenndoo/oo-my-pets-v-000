@@ -40,5 +40,26 @@ class Owner
 
   def walk_dogs
     @pets[:dogs].each {|dog| dog.mood = "happy"}
+  end
+
+  def play_with_cats
+    @pets[:cats].each {|cat| cat.mood = "happy"}
+  end
+
+  def feed_fish
+    @pets[:fishes].each {|fish| fish.mood = "happy"}
+  end
+
+  def sell_pets
+    #binding.pry
+    @pets.each do |species, animals|
+      animals.each do |animal|
+        animal.mood = "nervous"
+      end
+      animals.clear
+    end
+
+    def list_pets
+      "I have #{@pets[:fishes].size} fish, #{@pets[dogs].size} dog(s), and #{@pets[cats].size} cat(s)."
   # code goes here
 end
